@@ -13,7 +13,7 @@ def init(filename):
 df=init("data/season-1819.csv")
 # Emoji from https://getemoji.com/
 st.title('⚽️ LALIGA 2018-2019 APP ⚽️')
-option = st.sidebar.selectbox('Select your option:',('General','Match','Team'))
+option = st.selectbox('Select your option:',('General','Match','Team'))
 
 if option=='General':
     st.markdown("[DataSource](https://datahub.io/sports-data/spanish-la-liga#readme) link")
@@ -59,7 +59,7 @@ elif option=='Match':
         st.write("WARNING: Home team must be different than Away team")
 else:
     teams_list=np.unique(np.array(df['HomeTeam']))
-    team = st.sidebar.selectbox('Select a team:',(teams_list))
+    team = st.selectbox('Select a team:',(teams_list))
     st.markdown("## %s Statistics"%team)
     th=df.where(df['HomeTeam']==team).dropna()
     ta=df.where(df['AwayTeam']==team).dropna()
