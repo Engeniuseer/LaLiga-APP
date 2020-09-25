@@ -14,5 +14,5 @@ Web app to visualize football data and statistics using Streamlit framework.
 
 ### References
 
-[DataSource](https://datahub.io/sports-data/spanish-la-liga#readme)
+[DataSource](https://datahub.io/sports-data/spanish-la-liga#readme)<br/>
 [EmojiSource](https://getemoji.com/)
